@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sketch</title>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
-
-  <body>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seaweed Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #canvas-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10; /* 確保畫布在最上層 */
+      pointer-events: none; /* 允許鼠標事件穿透畫布 */
+    }
+    iframe {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: calc(100% - 200px);
+      height: calc(100% - 200px);
+      z-index: 5; /* 確保 iframe 在畫布下面 */
+    }
+  </style>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
+<body>
+  <div id="canvas-container">
     <script src="sketch.js"></script>
-  </body>
+  </div>
+  <iframe src="https://www.et.tku.edu.tw/" frameborder="0"></iframe>
+</body>
 </html>
